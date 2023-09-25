@@ -1,0 +1,290 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Basic sans serif 7';
+    text-align: center;
+    -webkit-user-select: none; 
+    user-select: none;
+    padding: 5px;
+}
+
+#escoba{
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    z-index: 100;
+    display: none;
+}
+
+#menuimg{
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    z-index: 101;
+    background-color: black;
+}
+#menuimg:hover{
+    transform: scale(1.2);
+}
+
+#menu{
+    position: fixed;
+    top: 5%;
+    left: 10%;
+    z-index: 100;
+    background-color: rgb(19, 19, 19);
+    color: white;
+    border-radius: 10px;
+}
+
+#menu li {
+    list-style-type: none;
+    padding: 5px;
+    background-color: rgb(19, 19, 19);
+}
+
+#menu li a{
+    z-index: 102;
+    display: block;
+    text-decoration: none;
+    color: rgb(200, 200, 200);
+    border-radius: 10px;
+}
+#menu li:hover a{
+    color: white;
+}
+
+/* Estilo al pasar el mouse por encima de los elementos li */
+#menu li:hover {
+    background-color: rgb(98, 98, 98);
+}
+
+#escoba:hover{
+    animation: rotar 1s infinite ease;
+}
+
+@keyframes rotar {
+    0%{
+        transform: rotate(30deg) scale(1);
+    }
+    50%
+    {
+        transform: rotate(-30deg) scale(1.3);
+    }
+    100%
+    {
+        transform: rotate(30deg) scale(1);
+    }
+}
+
+h1{
+    color: rgb(107, 129, 255);
+}
+
+h2{
+    color: rgb(157, 164, 202);
+}
+
+h2:hover{
+    color: rgb(202, 206, 229);
+    transition: 0.15s;
+}
+
+.Conceptos{
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(7,auto);
+    grid-template-rows: repeat(3,auto);
+    gap: 5px;
+    grid-template-areas: 'Concepto1 Concepto2 Concepto3 Concepto4 Concepto5 Concepto6 Concepto7'
+                        'Concepto1 Concepto2 Concepto3 Concepto4 Concepto5 Concepto6 Concepto7';
+}
+
+#Concepto1, #Concepto4, #Concepto7{grid-area: Concepto3;}
+#Concepto2, #Concepto5, #Concepto8{grid-area: Concepto4;}
+#Concepto3, #Concepto6, #Concepto9{grid-area: Concepto5;}
+
+#Concepto10 {grid-area: Concepto1;}
+#Concepto11 {grid-area: Concepto2;}
+#Concepto12 {grid-area: Concepto3;}
+#Concepto13 {grid-area: Concepto4;}
+#Concepto14 {grid-area: Concepto5;}
+#Concepto15 {grid-area: Concepto6;}
+#Concepto16 {grid-area: Concepto7;}
+
+#Concepto17 {grid-area: Concepto3;}
+#Concepto18 {grid-area: Concepto4;}
+#Concepto47 {grid-area: Concepto5;}
+
+#Concepto19 {grid-area: Concepto3;}
+#Concepto20 {grid-area: Concepto5;}
+
+#Concepto21 {grid-area: Concepto3;}
+#Concepto22 {grid-area: Concepto4;}
+#Concepto23 {grid-area: Concepto5;}
+
+#Concepto24 {grid-area: Concepto1;}
+#Concepto25 {grid-area: Concepto2;}
+#Concepto26 {grid-area: Concepto3;}
+#Concepto27 {grid-area: Concepto4;}
+#Concepto28 {grid-area: Concepto5;}
+#Concepto29 {grid-area: Concepto6;}
+#Concepto30 {grid-area: Concepto7;}
+
+#Concepto31 {grid-area: Concepto1;}
+#Concepto32 {grid-area: Concepto2;}
+#Concepto33 {grid-area: Concepto3;}
+#Concepto34 {grid-area: Concepto5;}
+#Concepto35 {grid-area: Concepto6;}
+#Concepto36 {grid-area: Concepto7;}
+
+#Concepto37 {grid-area: Concepto2;}
+#Concepto38 {grid-area: Concepto3;}
+#Concepto39 {grid-area: Concepto4;}
+#Concepto40 {grid-area: Concepto5;}
+#Concepto41 {grid-area: Concepto6;}
+
+#Concepto42 {grid-area: Concepto2;}
+#Concepto43 {grid-area: Concepto3;}
+#Concepto44 {grid-area: Concepto4;}
+#Concepto45 {grid-area: Concepto5;}
+#Concepto46 {grid-area: Concepto6;}
+
+#Concepto48 {grid-area: Concepto2;}
+#Concepto49 {grid-area: Concepto3;}
+#Concepto50 {grid-area: Concepto5;}
+#Concepto51 {grid-area: Concepto6;}
+
+#Concepto52 {grid-area: Concepto2;}
+#Concepto53 {grid-area: Concepto3;}
+#Concepto54 {grid-area: Concepto5;}
+#Concepto55 {grid-area: Concepto6;}
+#Concepto56 {grid-area: Concepto2;}
+#Concepto57 {grid-area: Concepto3;}
+#Concepto58 {grid-area: Concepto5;}
+#Concepto59 {grid-area: Concepto6;}
+
+
+.Concepto{
+        z-index: 50;
+        padding: 5px;
+        border: 2px solid rgb(132, 214, 255);
+        border-radius: 5px;
+}
+
+.Concepto:hover{
+                background-color: rgba(94, 94, 94, 0.305);
+                border-radius: 5px;
+                animation: atenuar 2s infinite;
+                border: 2px solid rgb(239, 250, 255);
+}
+
+#Descripcion{
+    display: none;
+    background-color: rgb(172, 241, 215);
+    color: black;
+    border-radius: 5px;
+    z-index: 51;
+}
+
+.Aclaraciones{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: start;
+    position: absolute;
+    top: -100%;
+}
+
+.Aclaracion{
+    display: flex;
+    width: 100%;
+    justify-content: start;
+}
+
+.Aclaracion p{
+    display: none;
+    position: relative;
+    z-index: 52;
+}
+
+.Aclaracion img{
+    margin: 15px;
+    animation: brillos 1.5s infinite;
+    z-index: 53;
+}
+
+.Aclaracion img:hover + p{
+    display: flex;
+    position: Absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgb(33, 33, 72);
+    border-radius: 10px;
+    padding: 8px;
+    overflow: hidden;
+    animation-name: AnimacionEntrada;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes AnimacionEntrada{
+        0% 
+    {
+        position: fixed;
+        top: 0%;
+        left: 5%;
+        color: rgba(255, 255, 255, 0);
+        width: 0%;
+        height: 10vh;
+    }
+        50% 
+    {
+        position: fixed;
+        width: 15%;
+        height: fit-content-moz-fit-content;
+        height: 20vh;
+    }
+        100% 
+    {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30%;
+        height: fit-content-moz-fit-content;
+        color: white;
+    }
+}
+
+
+@keyframes atenuar {
+    0% 
+    {
+        background-color: rgb(98, 98, 98);
+    }
+        50% 
+    {
+        background-color: rgb(46, 46, 46);
+    }
+        100% 
+    {
+        background-color: rgb(98, 98, 98);
+    }
+}
+
+
+@keyframes brillos {
+    0% 
+    {
+        transform: scale(1);
+    }
+        50% 
+    {
+        transform: scale(1.15);
+    }
+        100% 
+    {
+        transform: scale(1);
+    }
+}
