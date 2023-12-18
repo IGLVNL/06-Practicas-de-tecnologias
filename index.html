@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="STYLESHEET" type="text/css" href="Styles.css">
-    <title>Document</title>
+    <title>Practicas Javascript</title>
     <link rel="icon" type="image/png" href="Javascript.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="Javascript.png" sizes="16x16" />
 </head>
@@ -15,6 +15,42 @@
 
     <div id="Descripcion">Nada</div>
     <h1>Javascript</h1>
+
+    <h2 id="004">Variables</h2>
+    <p>Una variable es un espacio en memoria, dedicado a contener algún tipo de dato</p>
+
+    <h2 id="005">Declaracion de una variable</h2>
+    <p>Existen 3 formas de declarar una variable</p>
+    <div class="Conceptos">
+        <div class="Concepto" id="Concepto4">Var</div>
+        <div class="Concepto" id="Concepto5">Let</div>
+        <div class="Concepto" id="Concepto6">Const</div>
+        <div class="Aclaraciones">
+            <div class="Aclaracion">
+                <img class="foquito" src="img/lightbulb_FILL0_wght400_GRAD0_opsz24.svg" alt="img">
+                <p>El Scope, es el ambito de la variable, y este determina el alcance de la misma, asi como su accesibilidad.</p>
+            </div>
+            <div class="Aclaracion">
+                <img class="foquito" src="img/lightbulb_FILL0_wght400_GRAD0_opsz24.svg" alt="img">
+                <p>Declarar una variable significa darle un nombre, y definir su tipo.</p>
+            </div>
+            <div class="Aclaracion">
+                <img class="foquito" src="img/lightbulb_FILL0_wght400_GRAD0_opsz24.svg" alt="img">
+                <p>Inicializar una variable significa darle un valor a la misma.</p>
+            </div>
+            <div class="Aclaracion">
+                <img class="foquito" src="img/lightbulb_FILL0_wght400_GRAD0_opsz24.svg" alt="img">
+                <p>Uno puede declarar una variable sin definir el ambito de la misma (Let o var), pero implicitamente, Javascript las reconoce como Var, por lo que siempre se recomienda declarar el ambito mas usado, en general Let.</p>
+            </div>
+            <div class="Aclaracion">
+                <img class="foquito" src="img/lightbulb_FILL0_wght400_GRAD0_opsz24.svg" alt="img">
+                <p>El Hoisting, es un comportamiento que hace que las variables y funciones declaradas, se "eleven" al principio del bloque donde se las declara, lo que hace que cuando 
+                    se las declare, sin importar en donde, estas se comportan como si se las declarasen al principio del bloque, aunque su asignacion si se realice en la ubicacion correspondiente
+                    dentro del código.
+                </p>
+            </div>
+        </div>
+    </div>
 
     <h2 id="001">Tipos de datos</h2>
     <p>Existen 3 tipos de datos, mas usados en Javascript</p>
@@ -41,38 +77,6 @@
         <div class="Concepto" id="Concepto14">String</div>
         <div class="Concepto" id="Concepto15">Symbol</div>
         <div class="Concepto" id="Concepto16">Bigint</div>
-    </div>
-
-    <h2 id="004">Variables</h2>
-    <p>Una variable es un espacio en memoria, dedicado a contener algún tipo de dato</p>
-
-    <h2 id="005">Declaracion de una variable</h2>
-    <p>Existen 3 formas de declarar una variable</p>
-    <div class="Conceptos">
-        <div class="Concepto" id="Concepto4">Var</div>
-        <div class="Concepto" id="Concepto5">Let</div>
-        <div class="Concepto" id="Concepto6">Const</div>
-        <div class="Aclaraciones">
-            <div class="Aclaracion">
-                <img class="foquito" src="img/lightbulb_FILL0_wght400_GRAD0_opsz24.svg" alt="img">
-                <p>El Scope, es el ambito de la variable, y este determina el alcance de la misma, asi como su accesibilidad.</p>
-            </div>
-            <div class="Aclaracion">
-                <img class="foquito" src="img/lightbulb_FILL0_wght400_GRAD0_opsz24.svg" alt="img">
-                <p>Declarar una variable significa darle un nombre, y definir su tipo.</p>
-            </div>
-            <div class="Aclaracion">
-                <img class="foquito" src="img/lightbulb_FILL0_wght400_GRAD0_opsz24.svg" alt="img">
-                <p>Inicializar una variable significa darle un valor a la misma.</p>
-            </div>
-            <div class="Aclaracion">
-                <img class="foquito" src="img/lightbulb_FILL0_wght400_GRAD0_opsz24.svg" alt="img">
-                <p>El Hoisting, es un comportamiento que hace que las variables y funciones declaradas, se "eleven" al principio del bloque donde se las declara, lo que hace que cuando 
-                    se las declare, sin importar en donde, estas se comportan como si se las declarasen al principio del bloque, aunque su asignacion si se realice en la ubicacion correspondiente
-                    dentro del código.
-                </p>
-            </div>
-        </div>
     </div>
 
     <h2 id="006">Prompt y Alert</h2>
@@ -177,12 +181,61 @@
         <div class="Concepto" id="Concepto53">Desigualdad</div>
         <div class="Concepto" id="Concepto54">Identidad</div>
         <div class="Concepto" id="Concepto55">No identidad</div>
+        <div class="Aclaraciones">
+            <div class="Aclaracion">
+                <img class="foquito" src="img/lightbulb_FILL0_wght400_GRAD0_opsz24.svg" alt="img">
+                <p>La operacion de comparacion combinadas con cadenas de texto, se debe hacer entre parentesis, ya que sino, se concatenaria un texto con la variable numerica, y luego se compararia una cadena de texto con un numero, y daria un resultado erroneo, por ejemplo "console.log ("El resultado es: " + (A == B))"</p>
+            </div>
+        </div>
     </div>
     <div class="Conceptos">
         <div class="Concepto" id="Concepto56">Mayor a </div>
         <div class="Concepto" id="Concepto57">Mayor o igual a </div>
         <div class="Concepto" id="Concepto58">Menor a </div>
         <div class="Concepto" id="Concepto59">Menor o igual a </div>
+    </div>
+
+    <h2 id="014">Operadores logicos</h2>
+    <p>Son aquellos operadores que devuelven true o false, si se cumple una condición.</p>
+    <div class="Conceptos">
+        <div class="Concepto" id="Concepto60">AND (&&)</div>
+        <div class="Concepto" id="Concepto61">OR (||)</div>
+        <div class="Concepto" id="Concepto62">NOT (!)</div>
+        <div class="Aclaraciones">
+            <div class="Aclaracion">
+                <img class="foquito" src="img/lightbulb_FILL0_wght400_GRAD0_opsz24.svg" alt="img">
+                <p>Cabe aclarar, que los operadores lógicos, solo funcionan comparando valores o resultados Booleanos.</p>
+            </div>
+            <div class="Aclaracion">
+                <img class="foquito" src="img/lightbulb_FILL0_wght400_GRAD0_opsz24.svg" alt="img">
+                <p>Cuando decimos "Devolver", hacemos referencia a que luego de realizar ciertas operaciones preestablecidas, se tiene un resultado especifico.</p>
+            </div>
+            <div class="Aclaracion">
+                <img class="foquito" src="img/lightbulb_FILL0_wght400_GRAD0_opsz24.svg" alt="img">
+                <p>Estas operaciones, se pueden combinar de manera casi infinita. Por ejemplo: Console.log((A &lt; B) && (C &gt;= D) || (!E &lt;= F) && (G &gt; H))</p>
+            </div>
+        </div>
+    </div>
+
+    <h2 id="015">Camel case y Snake case</h2>
+    <div class="Conceptos">
+        <div class="Concepto" id="Concepto63">Camel case</div>
+        <div class="Concepto" id="Concepto64">Snake case</div>
+    </div>
+
+    <h2 id="016">Condicionales</h2>
+    <p>Un condicional, es una sentencia, o instrucción especifica, que permite realizar ciertas acciones.</p>
+    <div class="Conceptos">
+        <div class="Concepto" id="Concepto65">IF</div>
+        <div class="Concepto" id="Concepto66">ELSE</div>
+        <div class="Concepto" id="Concepto67">ELSE IF</div>
+    </div>
+
+    <h2 id="017">Arrays</h2>
+    <p>Un Array, o arreglo unidimensional, es un tipo de objeto, el cual funciona como una variable, pero que en vez de alojar un solo dato en especifico, contiene varios datos distintos.</p>
+    <div class="Conceptos">
+        <div class="Concepto" id="Concepto68">Estructura</div>
+        <div class="Concepto" id="Concepto69">Orden o indice</div>
     </div>
     <script src="Script.js"></script>
 </body>

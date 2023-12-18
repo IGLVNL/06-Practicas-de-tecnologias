@@ -1,11 +1,37 @@
 body{
     background-color: black;
     color: white;
-    font-family: 'Basic sans serif 7';
+    font-family: 'Arial';
+    font-size: 20px;
     text-align: center;
     -webkit-user-select: none; 
     user-select: none;
     padding: 5px;
+}
+body::-webkit-scrollbar, #Descripcion::-webkit-scrollbar{
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(132, 214, 255);
+    border-radius: 25px;
+    min-height: 50px;
+}
+#Descripcion::-webkit-scrollbar-thumb{
+    background-color: rgb(104, 166, 198);
+    border-radius: 25px;
+    min-height: 20px;
+}
+body::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(166, 224, 255);
+}
+#Descripcion::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(162, 185, 196);
+}
+body::-webkit-scrollbar-track, #Descripcion::-webkit-scrollbar-track{
+    background-color: #1a1a1a;
+}
+body::-webkit-scrollbar-track:hover, #Descripcion::-webkit-scrollbar-track:hover{
+    background-color: #252525;
 }
 
 #escoba{
@@ -94,10 +120,8 @@ h2:hover{
     display: grid;
     position: relative;
     grid-template-columns: repeat(7,auto);
-    grid-template-rows: repeat(3,auto);
     gap: 5px;
-    grid-template-areas: 'Concepto1 Concepto2 Concepto3 Concepto4 Concepto5 Concepto6 Concepto7'
-                        'Concepto1 Concepto2 Concepto3 Concepto4 Concepto5 Concepto6 Concepto7';
+    grid-template-areas: 'Concepto1 Concepto2 Concepto3 Concepto4 Concepto5 Concepto6 Concepto7';
 }
 
 #Concepto1, #Concepto4, #Concepto7{grid-area: Concepto3;}
@@ -165,6 +189,20 @@ h2:hover{
 #Concepto59 {grid-area: Concepto6;}
 
 
+#Concepto60 {grid-area: Concepto3;}
+#Concepto61 {grid-area: Concepto4;}
+#Concepto62 {grid-area: Concepto5;}
+
+#Concepto63 {grid-area: Concepto3;}
+#Concepto64 {grid-area: Concepto5;}
+
+#Concepto65 {grid-area: Concepto3;}
+#Concepto66 {grid-area: Concepto4;}
+#Concepto67 {grid-area: Concepto5;}
+
+#Concepto68 {grid-area: Concepto3;}
+#Concepto69 {grid-area: Concepto5;}
+
 .Concepto{
         z-index: 50;
         padding: 5px;
@@ -183,7 +221,7 @@ h2:hover{
     display: none;
     background-color: rgb(172, 241, 215);
     color: black;
-    border-radius: 5px;
+    border-radius: 10px;
     z-index: 51;
 }
 
@@ -224,7 +262,7 @@ h2:hover{
     padding: 8px;
     overflow: hidden;
     animation-name: AnimacionEntrada;
-    animation-duration: 0.5s;
+    animation-duration: 0.25s;
     animation-fill-mode: forwards;
 }
 
@@ -241,7 +279,7 @@ h2:hover{
         50% 
     {
         position: fixed;
-        width: 15%;
+        width: 30%;
         height: fit-content-moz-fit-content;
         height: 20vh;
     }
@@ -251,7 +289,7 @@ h2:hover{
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 30%;
+        width: 50%;
         height: fit-content-moz-fit-content;
         color: white;
     }

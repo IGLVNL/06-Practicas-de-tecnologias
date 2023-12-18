@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let lista = null;
     
     document.body.onclick = function () {
+        console.clear();
         if(Descripcion.style.display === 'flex'){
             Descripcion.style.display = 'none';
             limpiar.style.display = 'none';
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     menuimg.onclick = function() {
+        console.clear();
         if(menu.style.display !== 'flex'){
             menu.style.display = 'flex';
             Descripcion.style.display = 'none';
@@ -37,7 +39,8 @@ document.addEventListener("DOMContentLoaded", function() {
         menu.style.overflowY = 'auto';
         menu.style.padding = '5px';
         lista = document.createElement("ul");
-        lista.style.listStyleType = "none";  if (menu.querySelector("ul") == null) {
+        lista.style.listStyleType = "none";  
+        if (menu.querySelector("ul") == null) {
             temas.forEach(function (tema) {
                 let contenidotema = tema.textContent;
                 let elementoLista = document.createElement("li");
@@ -52,10 +55,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 lista.style.padding = "0px";
                 lista.appendChild(elementoLista);
                 });
-                menu.appendChild(lista);
-                console.log(lista);
-            }
-            event.stopPropagation();
+            menu.appendChild(lista);
+        }
+        event.stopPropagation();
     };
 
     function smoothScroll(event, targetId) {
@@ -90,11 +92,11 @@ document.addEventListener("DOMContentLoaded", function() {
             Descripcion.style.maxHeight = '50%';
             Descripcion.style.overflowY = 'auto';
             Descripcion.style.top = '30%';
-            Descripcion.style.padding = '5px';
+            Descripcion.style.padding = '10px';
             if (concepto.id === "Concepto1") {
                 Descripcion.innerHTML = 'Una Variable del tipo Number, es una variable que'+ 
                                         ' acepta datos del tipo numérico, como por ejemplo' + 
-                                        '1 2 25 589 796.5 etc.';
+                                        ' 1 2 25 589 796.5 etc.';
             } else if (concepto.id === "Concepto2") {
                 Descripcion.innerHTML = 'Una Variable del tipo String, es una variable que'+ 
                                         ' acepta datos del tipo Caracteres de texto, como por ejemplo' + 
@@ -256,6 +258,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                         '*Revisa la consola. <br>' + 
                                         '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
                                         console.log("El resultado es: " + 5);
+                                        console.log('**En caso de que un numero este escrito como String, y se lo quiera restar a otro, se necesita  hacer una conversion a Entero. Para ello, se debe ejecutar la funcion parseInt("Numero Como String")');
                                         limpiar.style.display = 'flex';
             } else if (concepto.id === "Concepto39") {
                 console.clear();
@@ -380,21 +383,253 @@ document.addEventListener("DOMContentLoaded", function() {
                 console.log("Esta es una concatenación con backticks, y tiene la particularidad de que reconoce código HTML y lo aplica, en caso de que el string esté en el cuerpo del HTML.");
                 limpiar.style.display = 'flex';
             } else if (concepto.id === "Concepto52") {
-                        Descripcion.innerHTML = 'a == b';
+                        Descripcion.innerHTML = 'El operador a == b es equivalente a preguntar si el valor de A es igual al valor de B <br>' +
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("let A = 22");
+                        console.log("let B = 44");
+                        console.log("console.log(A == B)");
+                        let A = 22;
+                        let B = 44;
+                        console.log("El resultado es: " + (A == B));
+                        limpiar.style.display = 'flex';
             } else if (concepto.id === "Concepto53") {
-                        Descripcion.innerHTML = 'a != b';
+                        Descripcion.innerHTML = 'El operador a != b es equivalente a preguntar si el valor de A es distinto al valor de B <br>' +
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("let A = 22");
+                        console.log("let B = 44");
+                        console.log("console.log(A != B)");
+                        let A = 22;
+                        let B = 44;
+                        console.log("El resultado es: " + (A != B));
+                        limpiar.style.display = 'flex';
             } else if (concepto.id === "Concepto54") {
-                        Descripcion.innerHTML = 'a === b';
+                        Descripcion.innerHTML = 'El operador a === b es equivalente a preguntar si el valor de A es estrictamente igual al valor de B, lo que significa que no solo compara el valor de A y B, sino que también, sus tipos de datos, por ejemplo, si A vale 23, y es del tipo numerico, la comparacion devuelve "true", si el valor de B es 23 numerico, y no "23" del tipo string <br>' +
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("let A = 22" + ' *Este es un Number');
+                        console.log('let B = "44"' + ' *Este es un String');
+                        console.log("console.log(A === B)");
+                        let A = 22;
+                        let B = "44";
+                        console.log("El resultado es: " + (A === B));
+                        limpiar.style.display = 'flex';
             } else if (concepto.id === "Concepto55") {
-                        Descripcion.innerHTML = 'a !== b';
+                        Descripcion.innerHTML = 'El operador a !== b es equivalente a preguntar si el valor de A es estrictamente distinto al valor de B, lo que significa que no solo compara si el valor de A y B son distintos, sino que tambien que sus tipos de datos lo sean, por ejemplo, si A vale 23, y es del tipo numerico, la comparacion devuelve "false", si el valor de B es 40 numerico, ya que si bien son distintos en cuanto a valor, ambos son del tipo numerico, por lo que no se cumplen ambas condiciones, como para que pueda devolver "true" <br>' +
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("let A = 22" + ' *Este es un Number');
+                        console.log('let B = "44"' + ' *Este es un String');
+                        console.log("console.log(A !== B)");
+                        let A = 22;
+                        let B = "44";
+                        console.log("El resultado es: " + (A !== B));
+                        limpiar.style.display = 'flex';
             } else if (concepto.id === "Concepto56") {
-                        Descripcion.innerHTML = 'a > b';
+                        Descripcion.innerHTML = 'El operador a > b es equivalente a preguntar si el valor de A es mayor al valor de B, siempre hablando de datos numéricos <br>' +
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("let A = 22");
+                        console.log("let B = 44");
+                        console.log("console.log(A > B)");
+                        let A = 22;
+                        let B = 44;
+                        console.log("El resultado es: " + (A > B));
+                        limpiar.style.display = 'flex';
             } else if (concepto.id === "Concepto57") {
-                        Descripcion.innerHTML = 'a >= b';
+                        Descripcion.innerHTML = 'El operador a >= b es equivalente a preguntar si el valor de A es mayor o igual al valor de B, por lo que si se cumple alguna e las 2 condiciones, se devuelve "true" <br>' +
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("let A = 22");
+                        console.log("let B = 44");
+                        console.log("console.log(A >= B)");
+                        let A = 22;
+                        let B = 44;
+                        console.log("El resultado es: " + (A >= B));
+                        console.log("let A = 44");
+                        console.log("let B = 44");
+                        console.log("console.log(A >= B)");
+                        let C = 44;
+                        let D = 44;
+                        console.log("El resultado es: " + (C >= D));
+                        console.log("let A = 44");
+                        console.log("let B = 33");
+                        console.log("console.log(A >= B)");
+                        let E = 44;
+                        let F = 33;
+                        console.log("El resultado es: " + (E >= F));
+                        limpiar.style.display = 'flex';
             } else if (concepto.id === "Concepto58") {
-                        Descripcion.innerHTML = 'a < b';
+                        Descripcion.innerHTML = 'El operador a < b es equivalente a preguntar si el valor de A es menor al valor de B, siempre hablando de datos numéricos <br>' +
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("let A = 22");
+                        console.log("let B = 44");
+                        console.log("console.log(A < B)");
+                        let A = 22;
+                        let B = 44;
+                        console.log("El resultado es: " + (A < B));
+                        limpiar.style.display = 'flex';
             } else if (concepto.id === "Concepto59") {
-                        Descripcion.innerHTML = 'a <= b';
+                        Descripcion.innerHTML = 'El operador a <= b es equivalente a preguntar si el valor de A es menor o igual al valor de B, por lo que si se cumple alguna e las 2 condiciones, se devuelve "true" <br>' +
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("let A = 22");
+                        console.log("let B = 44");
+                        console.log("console.log(A <= B)");
+                        let A = 22;
+                        let B = 44;
+                        console.log("El resultado es: " + (A <= B));
+                        console.log("let A = 44");
+                        console.log("let B = 44");
+                        console.log("console.log(A <= B)");
+                        let C = 44;
+                        let D = 44;
+                        console.log("El resultado es: " + (C <= D));
+                        console.log("let A = 44");
+                        console.log("let B = 33");
+                        console.log("console.log(A <= B)");
+                        let E = 44;
+                        let F = 33;
+                        console.log("El resultado es: " + (E <= F));
+                        limpiar.style.display = 'flex';
+            } else if (concepto.id === "Concepto60") {
+                        Descripcion.innerHTML = 'El operador Y lógico (&&), lo que hace es verificar si el resultado de 2 o mas comparaciones (hechas con los operadores anteriores), dan todas como resultado "true". Si una sola comparacion, devuelve "false", ya el resultado del operador logico es "False" <br>' +
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("let A = true");
+                        console.log("let B = true");
+                        console.log("console.log(A && B)");
+                        let A = true;
+                        let B = true;
+                        console.log("El resultado es: " + (A && B));
+                        console.log("let A = false");
+                        console.log("let B = true");
+                        console.log("console.log(A && B)");
+                        let C = false;
+                        let D = true;
+                        console.log("El resultado es: " + (C && D));
+                        console.log("let A = false");
+                        console.log("let B = false");
+                        console.log("console.log(A && B)");
+                        let E = false;
+                        let F = false;
+                        console.log("El resultado es: " + (E && F));
+                        console.log("*En el caso del AND, se verifica si ambas condiciones son verdaderas, para asi devolver True");
+                        limpiar.style.display = 'flex';
+            } else if (concepto.id === "Concepto61") {
+                        Descripcion.innerHTML = 'El operador O lógico (||), lo que hace es verificar si al menos 1 de 2 o mas comparaciones (hechas con los operadores anteriores), dan todas como resultado "true". Si una sola comparacion, devuelve "true", ya el resultado del operador logico es "true". Si todos los resultados dan "False", el resultado de la operacion logica es "False" <br>' +
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("let A = true");
+                        console.log("let B = true");
+                        console.log("console.log(A || B)");
+                        let A = true;
+                        let B = true;
+                        console.log("El resultado es: " + (A || B));
+                        console.log("let A = false");
+                        console.log("let B = true");
+                        console.log("console.log(A || B)");
+                        let C = false;
+                        let D = true;
+                        console.log("El resultado es: " + (C || D));
+                        console.log("let A = false");
+                        console.log("let B = false");
+                        console.log("console.log(A || B)");
+                        let E = false;
+                        let F = false;
+                        console.log("El resultado es: " + (E || F));
+                        console.log("*En este caso, el OR lo que hace es verificar si en cada caso, al menos una de las condiciones se cumple, y luego devuelve True");
+                        limpiar.style.display = 'flex';
+            } else if (concepto.id === "Concepto62") {
+                        Descripcion.innerHTML = 'El operador NO lógico (!), o Negación, lo que hace es devolver lo contrario en valor de verdad, de aquello que da como resultado una comparacion <br>' +
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("let A = true");
+                        console.log("console.log(!A)");
+                        let A = true;
+                        console.log("El resultado es: " + (!A));
+                        console.log("*Como se puede ver, la negacion NOT, cambia el valor de verdad de aquello que nosotros le damos");
+                        limpiar.style.display = 'flex';
+            } else if (concepto.id === "Concepto63") {
+                        Descripcion.innerHTML = 'Camel Case, es una forma que tiene Javascript y otros lenguajes, de nombrar a sus elementos. <br> La idea es que cuando un elemento se escribe con Camel Case, la primer letra de la primer palabra, se escribe con minúscula, y en caso de que sean mas de una palabra, estas se escriben todas juntas, pero comenzando con Mayúsculas a partir de la segunda palabra. <br>' +
+                        'Por ejemplo, el método document.getElementById() es el metodo getElementById() perteneciente a la clase document. La palabra document, es una sola palabra, y comienza con minuscula, pero getElementById() es un conjunto de palabras, y estas se escriben todas juntas, separandose de manera indirecta, por las mayusculas de cada palabra.' + 
+                        '<br> Es una forma de poder leer mas facilmente una palabra propia del lenguaje. <br> Cabe aclarar que esta metodologia tambien sirve para declarar variables. <br> Por ejemplo let horaDeLlegada = 0500;';
+            } else if (concepto.id === "Concepto64") {
+                        Descripcion.innerHTML = 'Snake Case, es otra forma que tienen otros lenguajes, de nombrar a sus elementos. <br> La idea es que cuando un elemento se escribe con Snake Case, la separacion de las palabras se hace con un guion bajo, y ya no importa si la primer letra de una palabra es minuscula o mayuscula. <br>' +
+                        'En Javascript, solo se utiliza para declarar variables. Por ejemplo let horario_de_salida = 0060;'
+            } else if (concepto.id === "Concepto65") {
+                        Descripcion.innerHTML = 'La estructura basica de un condiconal es "if (Condicion Logica con resultado True) {Bloque de codigo a ejecutar}" <br>' +
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("let A = 2;");
+                        console.log("let B = 5;");
+                        console.log("**Estructura del condicional**");
+                        console.log("if (A < B) \n{ \nConsole.log('Este es el bloque a ejecutar en caso de que se cumpla la condicion');\n};");
+                        let A = 2;
+                        let B = 5;
+                        if (A < B){console.log("El valor de verdad de la condicion A < B es "+ (A < B))};
+                        limpiar.style.display = 'flex';
+            } else if (concepto.id === "Concepto66") {
+                        Descripcion.innerHTML = 'La sentencia Else, es aquella que ejecuta un bloque especifico de codigo, en caso de que la condicion del IF no se cumpla. <br>' +
+                        'La estructura quedaria asi: <br>"if (Condicion Logica Principal) {Bloque de codigo Principal} else { Bloque de codigo alternativo}" <br>' +
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("let A = 2;");
+                        console.log("let B = 5;");
+                        console.log("let C = 7;");
+                        console.log("let D = 9;");
+                        console.log("**Estructura del condicional**");
+                        console.log("if (A > B) \n{ \nConsole.log('Bloque principal');\n} \nelse \n{\nConsole.log('Bloque secundario');\n};");
+                        console.log("**En caso de no se cumpla la primer condicion, se pasa a verificar si se cumple la segunda. \nSi no se cumple ninguna, o no se ejecuta nada, o se puede poner un ELSE como alternativa a los de mas IF.");
+                        limpiar.style.display = 'flex';
+            } else if (concepto.id === "Concepto67") {
+                        Descripcion.innerHTML = 'La sentencia Else If, se diferencia en que toma como alternativa otra condicion, y no la condicion con valor de verdad False, del argumento principal, como es el caso del ELSE simple. <br>' +
+                        'La estructura quedaria asi: <br>"if (Condicion Logica Principal) {Bloque de codigo Principal} else if (Condicion logica secundaria) { Bloque de codigo secundario}" <br>' +
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("let A = 2;");
+                        console.log("let B = 5;");
+                        console.log("let C = 7;");
+                        console.log("let D = 9;");
+                        console.log("**Estructura del condicional**");
+                        console.log("if (A > B) \n{ \nConsole.log('Bloque principal');\n} \nelse if (C < D) \n{\nConsole.log('Bloque secundario');\n};");
+                        console.log("**En caso de no se cumpla la primer condicion, se pasa a verificar si se cumple la segunda. \nSi no se cumple ninguna, o no se ejecuta nada, o se puede poner un ELSE como alternativa a los de mas IF.");
+                        limpiar.style.display = 'flex';
+            } else if (concepto.id === "Concepto68") {
+                        Descripcion.innerHTML = 'Un array se declara como se declara una variable, con let, var o const.<br>' +
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("**Si uno quiere crear un array Vacio, lo puede hacer asi:");
+                        console.log("Let Contenido = [];");
+                        console.log("**Si uno quiere declarar un array e inicializarlo poniendole algun contenido, lo puede hacer asi:");
+                        console.log("Let Contenido = [22 , 44 , 17];");
+                        limpiar.style.display = 'flex';
+            } else if (concepto.id === "Concepto69") {
+                        Descripcion.innerHTML = 'Los elementos contenidos en un array, tienen que ser del mismo tipo, y tienen un orden o posicion asignado dentro del Array, esto hace que el Array tenga una cierta longitud, definida por el numero de elementos que contiene. <br> Si bien, los datos, pueden tener un mismo valor, estos tienen un orden distinto dentro del Array, lo que hace estos se diferencien entre si.<br>' +
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("Let Contenido = [22 , 44 , 17];");
+                        console.log("En este caso, el array es numerico y tiene 3 elementos, o sea, su longitud es 3.");
+                        console.log("Ademas, hay que tener en cuenta, que en los arrays, el primer elemento, en este caso el 22, tiene asignado la posicion (o indice) '0' por defecto, y el segundo, el 44, la posicion '1', y asi sucesivamente");
+                        limpiar.style.display = 'flex';
             }
             event.stopPropagation(); // Detener la propagación del evento Onclick
         };
