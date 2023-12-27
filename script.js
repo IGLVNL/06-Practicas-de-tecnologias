@@ -7,7 +7,22 @@ document.addEventListener("DOMContentLoaded", function() {
     let menu = document.getElementById("menu");
     let temas = document.querySelectorAll("h2");
     let lista = null;
+    var conceptosContainers = document.querySelectorAll('.Conceptos');
+
+    //Metodo para aplicar estilos grid a los conceptos
+    conceptosContainers.forEach(function (container) {
+        var conceptosElements = container.querySelectorAll('.Concepto');
+        var numeroElementos = conceptosElements.length;
+        container.classList.add('con-' + numeroElementos);
+        conceptosElements.forEach(function (contains,index){
+            var numeroIndice = index +1;
+            contains.classList.add('concept-' + numeroIndice);
+        });
+    });
+    //Metodo para aplicar estilos grid a los conceptos
+
     
+    //Metodo para cancelar las burbujas emergentes
     document.body.onclick = function () {
         console.clear();
         if(Descripcion.style.display === 'flex'){
@@ -18,12 +33,16 @@ document.addEventListener("DOMContentLoaded", function() {
             menu.style.display = 'none';
         };
     };
+    //Metodo para cancelar las burbujas emergentes
 
+    //Metodo para limpiar la consola
     limpiar.onclick = function() {
         console.clear();
         limpiar.style.display = 'none';
     };
+    //Metodo para limpiar la consola
 
+    //Metodo para crear el menu
     menuimg.onclick = function() {
         console.clear();
         if(menu.style.display !== 'flex'){
@@ -59,24 +78,30 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         event.stopPropagation();
     };
+    //Metodo para crear el menu
 
+    //Metodo smooth
     function smoothScroll(event, targetId) {
         event.preventDefault();
         const targetElement = document.getElementById(targetId);
         targetElement.scrollIntoView({ behavior: 'smooth' });
     }
+    //Metodo smooth
 
+    //Metodo para mostrar el foco
     imgFoco.forEach(function(elemento) {
         elemento.addEventListener("mouseover", function() {
             elemento.setAttribute("src", "img/wb_incandescent_FILL0_wght400_GRAD0_opsz24.svg");
             Descripcion.style.display = "none";
+            limpiar.style.display = 'none';
         });
         elemento.addEventListener("mouseout", function() {
             elemento.setAttribute("src", "img/lightbulb_FILL0_wght400_GRAD0_opsz24.svg");
         });
-    });//funcion para cambiar la imagen del foquito
-        //Funcion para quitar las descripciones cuando se esta viendo una aclaracion
+    });
+    //Metodo para mostrar el foco
 
+    //Metodo para agregar contenido a los botones
     conceptos.forEach(function(concepto) {
         concepto.onclick = function() {
             if(menu.style.display !== 'none'){
@@ -619,21 +644,199 @@ document.addEventListener("DOMContentLoaded", function() {
                         console.log("**Si uno quiere crear un array Vacio, lo puede hacer asi:");
                         console.log("Let Contenido = [];");
                         console.log("**Si uno quiere declarar un array e inicializarlo poniendole algun contenido, lo puede hacer asi:");
-                        console.log("Let Contenido = [22 , 44 , 17];");
+                        console.log("let Contenido = [22 , 44 , 17];");
                         limpiar.style.display = 'flex';
             } else if (concepto.id === "Concepto69") {
                         Descripcion.innerHTML = 'Los elementos contenidos en un array, tienen que ser del mismo tipo, y tienen un orden o posicion asignado dentro del Array, esto hace que el Array tenga una cierta longitud, definida por el numero de elementos que contiene. <br> Si bien, los datos, pueden tener un mismo valor, estos tienen un orden distinto dentro del Array, lo que hace estos se diferencien entre si.<br>' +
                         '*Revisa la consola. <br>' + 
                         '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
                         console.clear();
-                        console.log("Let Contenido = [22 , 44 , 17];");
+                        console.log("let Contenido = [22 , 44 , 17];");
                         console.log("En este caso, el array es numerico y tiene 3 elementos, o sea, su longitud es 3.");
                         console.log("Ademas, hay que tener en cuenta, que en los arrays, el primer elemento, en este caso el 22, tiene asignado la posicion (o indice) '0' por defecto, y el segundo, el 44, la posicion '1', y asi sucesivamente");
                         limpiar.style.display = 'flex';
             }
+            else if (concepto.id === "Concepto70") {
+                        Descripcion.innerHTML = 'Un array asociativo, es un array que en vez de tener un indice numerico y ordenado, tiene un indice String y que sigue el orden logico del array. Esto significa que para declarar el array hay que hacerlo de otra manera. <br>' +
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("Estos arrays se declaran de la siguiente manera: ");
+                        console.log("let Arreglo = {\n nombre: 'PC',\n Procesador: 'Intel Core-I7',\n ram: '16gb',\n video: 'RX580-8gb',\n disco: '1TB'};");
+                        console.log("Si se quiere acceder a algun elemento del array, se debe hacer, mencionando el nombre del indice del elemento, no el numero de indice, como es el caso de los arrays normales.");
+                        console.log('console.log("Procesador");');
+                        console.log("Y si quiero mostrar el array completo, lo hago llamandolo por su nombre. Quedando de la siguiente manera:");
+                        let  Arreglo = { nombre: 'PC' , Procesador: 'Intel Core-I7', ram: '16gb', video: 'RX580-8gb', disco: '1TB'};
+                        console.log(Arreglo);
+                        console.log("**hay que tener en cuenta que a diferencia de los arrays normales, estos se escriben entre llaves {}, no entre corchetes [].");
+            }
+            else if (concepto.id === "Concepto71") {
+                        Descripcion.innerHTML = 'El metodo console.log, lo que hace es enviar un mensaje o resultado de una operacion, por consola, para ello, hay que acceder a la consola, lo cual se hace con click derecho en la pagina, inspeccionar y luego consola, o presionando la combinacion Ctrl + Shift + J.';
+            }
+            else if (concepto.id === "Concepto72") {
+                        Descripcion.innerHTML = 'Presiona Ctrl + Shift + J para acceder.';
+                        console.clear();
+                        console.log("Esto es un mensaje por consola");   
+                        limpiar.style.display = 'flex';      
+            }
+            else if (concepto.id === "Concepto73") {
+                        Descripcion.innerHTML = 'Las estructuras de control de seleccion, o tambien llamadas condicionales, son aquellas que permiten al programa, seleccionar ciertas acciones, u otras, en funcion del cumplimiento o no de una condicion definida. Estas estructuras son los condicionales IF, ELSE, ELSE IF.';
+                        console.clear();        
+            }
+            else if (concepto.id === "Concepto74") {
+                        Descripcion.innerHTML = 'Las estructuras de control de repeticion, o tambien llamados ciclos, son aquellos que permiten al programa, realizar ciertas acciones, de manera repetitiva y ciclica, un numero determinado de veces, en base al cumplimiento de cierta condicion. Por ejemplo, los ciclos FOR, WHILE o DO WHILE';
+                        console.clear();        
+            }
+            else if (concepto.id === "Concepto75") {
+                        Descripcion.innerHTML = 'Las estructuras de control de salto, son aquellos que intervienen en el funcionamiento de un ciclo, en base a ciertas condiciones definidas. Esto se hace con las sentencias Break y Continue.';
+                        console.clear();       
+            }
+            else if (concepto.id === "Concepto76") {
+                        Descripcion.innerHTML = 'El ciclo WHILE, es un ciclo que ejecuta una accion siempre en cuando el resultado de la condicion, sea verdadero.' + 
+                        'La forma de escribir la sentencia es la siguiente: <br> While (Condicion) {Bloque de codigo}; <br>' + 
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("let numero = 5;");
+                        console.log("While(numero < 10){\n console.log('numero');\n numero++;\n}");
+                        console.log("Lo que hace el ciclo, es sumarle 1 al contenido de numero, de manera iterativa, hasta que la condicion se cumpla. Dando como resultado la siguiente lista por consola:");
+                        let numero = 5;
+                        while (numero < 10) {
+                            console.log(numero)
+                            numero++;
+                        }
+                        limpiar.style.display = 'flex';
+            }
+            else if (concepto.id === "Concepto77") {
+                        Descripcion.innerHTML = 'El ciclo DO WHILE, primero establece la accion en el bloque DO, y luego define la condicion en el bloque WHILE. <br>' + 
+                        'La forma de escribir la sentencia es la siguiente: <br> do {Bloque de codigo}; <br> while (condicion) <br>' + 
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("let numero = 5;");
+                        console.log("do { \nconsole.log('numero');\nnumero++;\n } \nWhile(numero < 10); \n");
+                        console.log("Este ciclo, al ejecutar primero el codigo, y luego verificar el estado de la condicion, asegura que al menos una vez, se ejecute el codigo, a diferencia del ciclo WHILE.");
+                        let numero = 5;
+                        do {
+                            console.log(numero)
+                            numero++;
+                        }
+                        while (numero < 10) 
+                        limpiar.style.display = 'flex';
+            }
+            else if (concepto.id === "Concepto78") {
+                        Descripcion.innerHTML = 'El ciclo FOR, tiene la siguiente estructura: <br>' + 
+                        ' for (variable iniciada y declarada ; condicion a cumplir ; incremente o decremento) {Codigo} <br>' + 
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("for (let i = 0 ; i < 5 ; i++) \n{\n console.log(i);\n}");
+                        console.log("Este ciclo, declara e inicializa una variable local al ciclo, que por convencion se la llama 'i' por 'index', en la primer parte de la estructura, luego, se estable una condicion numerica a cumplir para esa variable, y por ultimo, establece de a cuanto se va a incrementar o reducir el valor e esa variable luego de ejecutar el bloque de cofigo al menos una vez.");
+                        for (let i = 0; i <= 5; i++) {
+                            console.log(i);
+                        }
+                        limpiar.style.display = 'flex';
+            }
+            else if (concepto.id === "Concepto79") {
+                        Descripcion.innerHTML = 'La sentencia BREAK, detiene la ejecucion de cualquier ciclo. <br>' + 
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("let numero = 5;");
+                        console.log("While(numero < 10){\n console.log('numero');\n numero++;\n if (numero == 8) \n {\nbreak;\n}\n}");
+                        console.log("En este caso, el condicional dentro del ciclo, ejecuta un BREAK cuando se cumpla la condicion, haciendo que el ciclo no ejecute mas iteraciones.");
+                        let numero = 5;
+                        while (numero < 10) {
+                            console.log(numero)
+                            numero++;
+                            if (numero == 8) {
+                                break;
+                            }
+                        }
+                        limpiar.style.display = 'flex';
+           }
+            else if (concepto.id === "Concepto80") {
+                        Descripcion.innerHTML = 'La sentencia CONTINUE, detiene la ejecucion de la iteracion actual de un ciclo, y de todo lo que viene despues de la sentencia, pasando a la siguiente iteracion. <br>' + 
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("let numero = 5;");
+                        console.log("While(numero < 10){\nnumero++;\nif (numero == 7) \n{\n continue;\n console.log('numero');\n}\n}");
+                        console.log("En este caso, el condicional dentro del ciclo, ejecuta el CONTINUE en la septima iteracion, por lo que el console.log que le sigue a la sentencia, y cualquier otro codigo que hubiese, no se ejecuta, y sigue ejecutando las iteraciones restantes.");
+                        let numero = 5;
+                        while (numero < 10) {
+                            numero++;
+                            if (numero == 7) {
+                                continue;
+                            }
+                            console.log(numero)
+                        }
+                        limpiar.style.display = 'flex';
+           }
+            else if (concepto.id === "Concepto81") {
+                        Descripcion.innerHTML = 'El ciclo FOR IN, sirve para recorrer Arrays, y su estructura es la siguiente: <br>' + 
+                        'FOR (Variable IN Array) {Bloque de codigo} <br>' + 
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("let animales = ['perro','gato','tiranosaurio'];");
+                        console.log("for(animal in animales) {\nconsole.log(animal);\n}");
+                        let animales = ['perro','gato','tiranosaurio'];
+                        for(animal in animales) {
+                        console.log(animal);
+                        }
+                        console.log("Este ciclo, requiere que halla un array que recorrer, y luego  requiere crear una variable, a la que se le asigne el indice del array, en este caso, la variable usada como parametro se llama 'animal', y ejecuta el codigo por cada elemento del array.");
+                        console.log("Se lo suele utilizar para  trabajar con propiedades de objetos contenidos en un array.");
+                        console.log("Hay que considerar este ciclo, asigna a la variable creada, el indice del array, no el valor del dato asignado a dicha posicion.");
+                        console.log("Si se quiere obtener el dato contenido dentro del indice actual, se hace de la siguiente manera:");
+                        console.log("for(animal in animales) {\nanimales[animal];\n}");
+                        for(animal in animales) {
+                        console.log(animales[animal]);
+                        }
+                        limpiar.style.display = 'flex';
+           }
+            else if (concepto.id === "Concepto82") {
+                        Descripcion.innerHTML = 'El ciclo FOR OF, hace lo mismo que el FOR IN, y su estructura es la siguiente: <br>' + 
+                        'FOR (Variable OF Array) {Bloque de codigo} <br>' + 
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("let animales = ['perro','gato','tiranosaurio'];");
+                        console.log("for(animal of animales) {\nconsole.log(animal);\n}");
+                        let animales = ['perro','gato','tiranosaurio'];
+                        for(animal of animales) {
+                        console.log(animal);
+                        }
+                        limpiar.style.display = 'flex';
+                        console.log("Este ciclo, asigna a la variable creada, el valor del dato asignado al indice del array actual, no el valor de su posicion, a diferencia del ciclo FOR IN.");
+           }
+            else if (concepto.id === "Concepto83") {
+                        Descripcion.innerHTML = 'La sentencia LABEL, es una sentencia que cuando existe un Ciclo dentro de otro Ciclo, permite que al ejecutar un Break o un Continue, entro del ciclo interno, esas sentencias se apliquen a la iteracion completa, tanto del ciclo interno, como del externo.  <br>' + 
+                        'La forma de escribir esta sentencia, es colocando una etiqueta personalizada, antes de empezar el ciclo que contendra otros ciclos, y se escribe de la siguiente manera:  <br>' + 
+                        '"EtiquetaPersonalizada": <br> ciclo <br>' + 
+                        '*Revisa la consola. <br>' + 
+                        '**Presiona Ctrl + Shift + j para abrir la consola (en windows)';
+                        console.clear();
+                        console.log("EjemploLabel:\nfor (Let i = 0 ; i < 5 ; i++) \n{\n console.log(i); for (Let j = 0 ; j < 5 ; j++) \n{\nconsole.log(j); \n if(j == 4){break EjemploLabel}; \n}");
+                        EjemploLabel:
+                        for (let i = 0 ; i < 5 ; i++) 
+                        {
+                        console.log(i); 
+                        for (let j = 0 ; j < 5 ; j++)
+                            {
+                                console.log(j);
+                                if(j == 4){
+                                    break EjemploLabel;
+                                };
+                            }
+                        }
+                        limpiar.style.display = 'flex';
+                        console.log("En este caso, el ciclo interno, el que tiene la variable 'J', realiza un break llamando a la sentencia Label, la cual se llama 'EjemploLabel', de esta forma, cuando se llega a la iteracion definida en el IF, no solo se detiene el ciclo interno, sino tambien el externo, el de la variable 'i'.");
+           }
             event.stopPropagation(); // Detener la propagación del evento Onclick
         };
     });
+    //Metodo para agregar contenido a los botones
 });
 
 
@@ -642,7 +845,7 @@ document.addEventListener("DOMContentLoaded", function() {
 /*
  else if (concepto.id === "Concepto") {
                 Descripcion.innerHTML = '';
-            }
+}
 */
 
 /*

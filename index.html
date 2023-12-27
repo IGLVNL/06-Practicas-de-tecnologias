@@ -17,7 +17,7 @@
     <h1>Javascript</h1>
 
     <h2 id="004">Variables</h2>
-    <p>Una variable es un espacio en memoria, dedicado a contener algún tipo de dato</p>
+    <p>Una variable es un espacio en memoria, dedicado a contener o almacenar algún tipo de dato</p>
 
     <h2 id="005">Declaracion de una variable</h2>
     <p>Existen 3 formas de declarar una variable</p>
@@ -41,6 +41,10 @@
             <div class="Aclaracion">
                 <img class="foquito" src="img/lightbulb_FILL0_wght400_GRAD0_opsz24.svg" alt="img">
                 <p>Uno puede declarar una variable sin definir el ambito de la misma (Let o var), pero implicitamente, Javascript las reconoce como Var, por lo que siempre se recomienda declarar el ambito mas usado, en general Let.</p>
+            </div>
+            <div class="Aclaracion">
+                <img class="foquito" src="img/lightbulb_FILL0_wght400_GRAD0_opsz24.svg" alt="img">
+                <p>Hay que tener en cuenta que una vatriable, no se puede declarar mas de una vez, ya que si se hace, esto envia un error por consola. Lo que si se puede hacer es definirla nuevamente, al asignarle otro valor.</p>
             </div>
             <div class="Aclaracion">
                 <img class="foquito" src="img/lightbulb_FILL0_wght400_GRAD0_opsz24.svg" alt="img">
@@ -85,12 +89,14 @@
         <div class="Concepto" id="Concepto17">Alert</div>
         <div class="Concepto" id="Concepto18">Prompt</div>
         <div class="Concepto" id="Concepto47">document.write("Mensaje");</div>
+        <div class="Concepto" id="Concepto71">Console.log("Mensaje por consola");</div>
     </div>
 
     <h2 id="007">Ejemplos de Prompt y Alert</h2>
     <div class="Conceptos">
         <div class="Concepto" id="Concepto19">Ejemplo Alert</div>
         <div class="Concepto" id="Concepto20">Ejemplo Prompt</div>
+        <div class="Concepto" id="Concepto72">Ejemplo Console.log</div>
     </div>
 
     <h2 id="008">Ejemplos de Declaración de variables</h2>
@@ -223,20 +229,116 @@
         <div class="Concepto" id="Concepto64">Snake case</div>
     </div>
 
-    <h2 id="016">Condicionales</h2>
-    <p>Un condicional, es una sentencia, o instrucción especifica, que permite realizar ciertas acciones.</p>
+    <h2 id="016">Arrays</h2>
+    <p>Un Array, o arreglo unidimensional, es un tipo de objeto, el cual funciona como 
+        una variable, pero que en vez de alojar un solo dato en especifico, contiene 
+        varios datos distintos.</p>
+    <div class="Conceptos">
+        <div class="Concepto" id="Concepto68">Estructura</div>
+        <div class="Concepto" id="Concepto69">Orden, posicion o indice</div>
+        <div class="Concepto" id="Concepto70">Arrays asociativos</div>
+        <div class="Aclaraciones">
+            <div class="Aclaracion">
+                <img class="foquito" src="img/lightbulb_FILL0_wght400_GRAD0_opsz24.svg" alt="img">
+                <p>Para acceder al valor del dato de un elemento de un array, solo es necesario 
+                    especificar la posicion del elemento en el array. Por ejemplo: Let array = [A , B , C]; <br>
+                    En este caso, para poder acceder al segundo elemento del array, o sea, al de la posicion 1, 
+                    se debe escribir de esta manera: array[1]. Si se lo quisiera mostrar en consola, seria: 
+                    console.log(array[1]); Esto mostraria en consola el valor "B".
+                </p>
+            </div>
+            <div class="Aclaracion">
+                <img class="foquito" src="img/lightbulb_FILL0_wght400_GRAD0_opsz24.svg" alt="img">
+                <p>La forma de diferenciar un dato de otro, en un mismo 
+                    Array, es mediante su Indice, ya que distintos numeros de Indice, pueden tener 
+                    datos con el mismo valor. Por ejemplo: Let Objetos = ["Auto" , "Auto" , "Casa"]; 
+                    En este ejemplo, el Array Objetos, tiene 3 elementos, los cuales 
+                    tienen el indice 0, 1 y 2 respectivamente. Sin embargo, los primeros 
+                    dos, tienen el mismo valor del dato, o sea, "Auto", por lo que la unica 
+                    manera de diferenciarlos, es con sus indices, 0 y 1 respectivamente.
+                </p>
+            </div>
+            <div class="Aclaracion">
+                <img class="foquito" src="img/lightbulb_FILL0_wght400_GRAD0_opsz24.svg" alt="img">
+                <p>Hay que tener en cuenta que en los Arrays, todos los posibles indices 
+                    ya estan declarados, solo que no estan inicializados, es por eso,
+                    que si intentamos acceder al dato de un indice que no esta inicializado,
+                    en consola se envia "Undefined". Por ejemplo: Let Numeros = [1 , 2 , 3]; 
+                    Console.log(Numeros[5]); <br> En este ejemplo, en consola se envia el 
+                    error "Undefined", ya que no existe el elemento con el indice 5, solo 
+                    existen los elementos 0, 1 y 2.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h2 id="017">Estructuras de control</h2>
+    <p>Una estructuta de control, es un bloque de código que permite a
+         un programa realizar acciones, tomar decisiones o realizar repeticiones basadas 
+         en ciertas condiciones.
+    </p>
+    <div class="Conceptos">
+        <div class="Concepto" id="Concepto73">Estructuras de seleccion</div>
+        <div class="Concepto" id="Concepto74">Estructuras de repeticion</div>
+        <div class="Concepto" id="Concepto75">Estructuras de salto</div>
+    </div>
+
+    <h2 id="018">Condicionales</h2>
+    <p>Un condicional, es una sentencia, o instrucción especifica, que permite realizar 
+        ciertas acciones.</p>
     <div class="Conceptos">
         <div class="Concepto" id="Concepto65">IF</div>
         <div class="Concepto" id="Concepto66">ELSE</div>
         <div class="Concepto" id="Concepto67">ELSE IF</div>
     </div>
 
-    <h2 id="017">Arrays</h2>
-    <p>Un Array, o arreglo unidimensional, es un tipo de objeto, el cual funciona como una variable, pero que en vez de alojar un solo dato en especifico, contiene varios datos distintos.</p>
+    <h2 id="019">Ciclos</h2>
+    <p>Un ciclo, es una sentencia, que permite realizar un bloque de codigo de manera ciclica, siempre que el resultado de una comparacion logica, sea verdadero</p>
     <div class="Conceptos">
-        <div class="Concepto" id="Concepto68">Estructura</div>
-        <div class="Concepto" id="Concepto69">Orden o indice</div>
+        <div class="Concepto" id="Concepto76">WHILE</div>
+        <div class="Concepto" id="Concepto77">DO WHILE</div>
+        <div class="Concepto" id="Concepto78">FOR</div>
+        <div class="Concepto" id="Concepto81">FOR IN</div>
+        <div class="Concepto" id="Concepto82">FOR OF</div>
+        <div class="Aclaraciones">
+            <div class="Aclaracion">
+                <img class="foquito" src="img/lightbulb_FILL0_wght400_GRAD0_opsz24.svg" alt="img">
+                <p>Hay que tener en cuenta que en los ciclos, no hay que colocar una condicion que se cumpla siempre, ya que eso conforma un ciclo infinito, lo que significa que el ciclo se ejecuta indefinidamente, y detiene el funcionamiento del navegador.
+                </p>
+            </div>
+            <div class="Aclaracion">
+                <img class="foquito" src="img/lightbulb_FILL0_wght400_GRAD0_opsz24.svg" alt="img">
+                <p>Existen 2 tipos de bucles, los Indeterminados o Infinitos, que son aquellos que se ejecutan con infinidad de iteraciones, siempre en cuando se cumpla una condicion, como por ejemplo, el ciclo WHILE o DO WHILE.
+                    Sin embargo, tambien existen los ciclos Determinados o finitos, como el ciclo FOR, que ejecutan el codigo, un cierto numero de veces, previamente especificado.
+                </p>
+            </div>
+            <div class="Aclaracion">
+                <img class="foquito" src="img/lightbulb_FILL0_wght400_GRAD0_opsz24.svg" alt="img">
+                <p>En el ciclo FOR, hay que tener en cuenta que la declaracion de la variable "i", se puede hacer fuera del ciclo, y antes del mismo, pero si o si, la inicializacion se de debe hacer dentro del ciclo.</p>
+            </div>
+            <div class="Aclaracion">
+                <img class="foquito" src="img/lightbulb_FILL0_wght400_GRAD0_opsz24.svg" alt="img">
+                <p>En el caso del ciclo FOR IN, hay que considerar que este ciclo, no solo recorre un array de objetos, sino que tambien recorre y considera a las propiedades de dichos objetos.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2 id="020">Saltos</h2>
+    <p>Un salto, es una sentencia, que permite detener un ciclo, cuando se lo desee, o tambien continuarlo.</p>
+    <div class="Conceptos">
+        <div class="Concepto" id="Concepto79">BREAK</div>
+        <div class="Concepto" id="Concepto80">CONTINUE</div>
+        <div class="Concepto" id="Concepto83">LABEL</div>
+    </div>
+
+    <h2 id="021">Funciones</h2>
+    <p>Una funcion es un bloque de codigo, que se puede llamar o usar mediante el nombre que identifica a la funcion.</p>
+    <div class="Conceptos">
+        <div class="Concepto" id="Concepto84">Estructura</div>
     </div>
     <script src="Script.js"></script>
 </body>
+<footer>
+    <p><i>©<u>Practicas Javascript 2023-2024</u>.</i></p>
+</footer>
 </html>

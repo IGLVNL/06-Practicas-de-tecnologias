@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: black;
     color: white;
@@ -6,7 +9,18 @@ body{
     text-align: center;
     -webkit-user-select: none; 
     user-select: none;
-    padding: 5px;
+    padding: 15px;
+}
+footer{
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    align-content: end;
+}
+footer p {
+    margin-top: 50px;
+    margin-bottom: 0;
+    font-size: 16.5px;
 }
 body::-webkit-scrollbar, #Descripcion::-webkit-scrollbar{
     width: 10px;
@@ -124,84 +138,97 @@ h2:hover{
     grid-template-areas: 'Concepto1 Concepto2 Concepto3 Concepto4 Concepto5 Concepto6 Concepto7';
 }
 
-#Concepto1, #Concepto4, #Concepto7{grid-area: Concepto3;}
-#Concepto2, #Concepto5, #Concepto8{grid-area: Concepto4;}
-#Concepto3, #Concepto6, #Concepto9{grid-area: Concepto5;}
+.con-1 .concept-1 {
+    grid-area: Concepto4;
+}
 
-#Concepto10 {grid-area: Concepto1;}
-#Concepto11 {grid-area: Concepto2;}
-#Concepto12 {grid-area: Concepto3;}
-#Concepto13 {grid-area: Concepto4;}
-#Concepto14 {grid-area: Concepto5;}
-#Concepto15 {grid-area: Concepto6;}
-#Concepto16 {grid-area: Concepto7;}
+.con-2 .concept-1 {
+    grid-area: Concepto3;
+}
+.con-2 .concept-2 {
+    grid-area: Concepto5;
+}
 
-#Concepto17 {grid-area: Concepto3;}
-#Concepto18 {grid-area: Concepto4;}
-#Concepto47 {grid-area: Concepto5;}
+.con-3 .concept-1 {
+    grid-area: Concepto3;
+}
+.con-3 .concept-2 {
+    grid-area: Concepto4;
+}
+.con-3 .concept-3 {
+    grid-area: Concepto5;
+}
 
-#Concepto19 {grid-area: Concepto3;}
-#Concepto20 {grid-area: Concepto5;}
+.con-4 .concept-1 {
+    grid-area: Concepto2;
+}
+.con-4 .concept-2 {
+    grid-area: Concepto3;
+}
+.con-4 .concept-3 {
+    grid-area: Concepto5;
+}
+.con-4 .concept-4 {
+    grid-area: Concepto6;
+}
 
-#Concepto21 {grid-area: Concepto3;}
-#Concepto22 {grid-area: Concepto4;}
-#Concepto23 {grid-area: Concepto5;}
+.con-5 .concept-1 {
+    grid-area: Concepto2;
+}
+.con-5 .concept-2 {
+    grid-area: Concepto3;
+}
+.con-5 .concept-3 {
+    grid-area: Concepto4;
+}
+.con-5 .concept-4 {
+    grid-area: Concepto5;
+}
+.con-5 .concept-5 {
+    grid-area: Concepto6;
+}
 
-#Concepto24 {grid-area: Concepto1;}
-#Concepto25 {grid-area: Concepto2;}
-#Concepto26 {grid-area: Concepto3;}
-#Concepto27 {grid-area: Concepto4;}
-#Concepto28 {grid-area: Concepto5;}
-#Concepto29 {grid-area: Concepto6;}
-#Concepto30 {grid-area: Concepto7;}
+.con-6 .concept-1 {
+    grid-area: Concepto1;
+}
+.con-6 .concept-2 {
+    grid-area: Concepto2;
+}
+.con-6 .concept-3 {
+    grid-area: Concepto3;
+}
+.con-6 .concept-4 {
+    grid-area: Concepto5;
+}
+.con-6 .concept-5 {
+    grid-area: Concepto6;
+}
+.con-6 .concept-6 {
+    grid-area: Concepto7;
+}
 
-#Concepto31 {grid-area: Concepto1;}
-#Concepto32 {grid-area: Concepto2;}
-#Concepto33 {grid-area: Concepto3;}
-#Concepto34 {grid-area: Concepto5;}
-#Concepto35 {grid-area: Concepto6;}
-#Concepto36 {grid-area: Concepto7;}
+.con-7 .concept-1 {
+    grid-area: Concepto1;
+}
+.con-7 .concept-2 {
+    grid-area: Concepto2;
+}
+.con-7 .concept-3 {
+    grid-area: Concepto3;
+}
+.con-7 .concept-4 {
+    grid-area: Concepto4;
+}
+.con-7 .concept-5 {
+    grid-area: Concepto5;
+}
+.con-7 .concept-6 {
+    grid-area: Concepto6;
+}
+.con-7 .concept-7 {
+    grid-area: Concepto7;
+}
 
-#Concepto37 {grid-area: Concepto2;}
-#Concepto38 {grid-area: Concepto3;}
-#Concepto39 {grid-area: Concepto4;}
-#Concepto40 {grid-area: Concepto5;}
-#Concepto41 {grid-area: Concepto6;}
-
-#Concepto42 {grid-area: Concepto2;}
-#Concepto43 {grid-area: Concepto3;}
-#Concepto44 {grid-area: Concepto4;}
-#Concepto45 {grid-area: Concepto5;}
-#Concepto46 {grid-area: Concepto6;}
-
-#Concepto48 {grid-area: Concepto2;}
-#Concepto49 {grid-area: Concepto3;}
-#Concepto50 {grid-area: Concepto5;}
-#Concepto51 {grid-area: Concepto6;}
-
-#Concepto52 {grid-area: Concepto2;}
-#Concepto53 {grid-area: Concepto3;}
-#Concepto54 {grid-area: Concepto5;}
-#Concepto55 {grid-area: Concepto6;}
-#Concepto56 {grid-area: Concepto2;}
-#Concepto57 {grid-area: Concepto3;}
-#Concepto58 {grid-area: Concepto5;}
-#Concepto59 {grid-area: Concepto6;}
-
-
-#Concepto60 {grid-area: Concepto3;}
-#Concepto61 {grid-area: Concepto4;}
-#Concepto62 {grid-area: Concepto5;}
-
-#Concepto63 {grid-area: Concepto3;}
-#Concepto64 {grid-area: Concepto5;}
-
-#Concepto65 {grid-area: Concepto3;}
-#Concepto66 {grid-area: Concepto4;}
-#Concepto67 {grid-area: Concepto5;}
-
-#Concepto68 {grid-area: Concepto3;}
-#Concepto69 {grid-area: Concepto5;}
 
 .Concepto{
         z-index: 50;
@@ -247,9 +274,12 @@ h2:hover{
 }
 
 .Aclaracion img{
-    margin: 15px;
+    display: flex;
+    position: relative;
+    margin: 5px;
     animation: brillos 1.5s infinite;
     z-index: 53;
+    left: -2.5%;
 }
 
 .Aclaracion img:hover + p{
@@ -324,5 +354,218 @@ h2:hover{
         100% 
     {
         transform: scale(1);
+    }
+}
+
+@media (max-width: 970px) {
+
+    .Conceptos{
+        display: grid;
+        position: relative;
+        grid-template-columns: repeat(3,auto);
+        gap: 5px;
+        grid-template-areas:'Concepto1 Concepto2 Concepto3'
+                            'Concepto4 Concepto5 Concepto6'
+                            'Concepto7 Concepto8 Concepto9'
+    }
+        
+    .con-1 .concept-1 {
+        grid-area: Concepto2;
+    }
+
+    .con-2 .concept-1 {
+        grid-area: Concepto1;
+    }
+    .con-2 .concept-2 {
+        grid-area: Concepto3;
+    }
+
+    .con-3 .concept-1 {
+        grid-area: Concepto1;
+    }
+    .con-3 .concept-2 {
+        grid-area: Concepto2;
+    }
+    .con-3 .concept-3 {
+        grid-area: Concepto3;
+    }
+
+    .con-4 .concept-1 {
+        grid-area: Concepto1;
+    }
+    .con-4 .concept-2 {
+        grid-area: Concepto2;
+    }
+    .con-4 .concept-3 {
+        grid-area: Concepto3;
+    }
+    .con-4 .concept-4 {
+        grid-area: Concepto5;
+    }
+
+    .con-5 .concept-1 {
+        grid-area: Concepto1;
+    }
+    .con-5 .concept-2 {
+        grid-area: Concepto2;
+    }
+    .con-5 .concept-3 {
+        grid-area: Concepto3;
+    }
+    .con-5 .concept-4 {
+        grid-area: Concepto4;
+    }
+    .con-5 .concept-5 {
+        grid-area: Concepto6;
+    }
+
+    .con-6 .concept-1 {
+        grid-area: Concepto1;
+    }
+    .con-6 .concept-2 {
+        grid-area: Concepto2;
+    }
+    .con-6 .concept-3 {
+        grid-area: Concepto3;
+    }
+    .con-6 .concept-4 {
+        grid-area: Concepto4;
+    }
+    .con-6 .concept-5 {
+        grid-area: Concepto5;
+    }
+    .con-6 .concept-6 {
+        grid-area: Concepto6;
+    }
+
+    .con-7 .concept-1 {
+        grid-area: Concepto1;
+    }
+    .con-7 .concept-2 {
+        grid-area: Concepto2;
+    }
+    .con-7 .concept-3 {
+        grid-area: Concepto3;
+    }
+    .con-7 .concept-4 {
+        grid-area: Concepto4;
+    }
+    .con-7 .concept-5 {
+        grid-area: Concepto5;
+    }
+    .con-7 .concept-6 {
+        grid-area: Concepto6;
+    }
+    .con-7 .concept-7 {
+        grid-area: Concepto8;
+    }
+}
+
+@media (max-width: 590px) {
+
+    .Conceptos{
+        display: grid;
+        position: relative;
+        grid-template-columns: repeat(1,auto);
+        gap: 5px;
+        grid-template-areas:'Concepto1'
+                            'Concepto2'
+                            'Concepto3'
+                            'Concepto4'
+                            'Concepto5'
+                            'Concepto6'
+                            'Concepto7'
+                            'Concepto8'
+    }
+        
+    .con-1 .concept-1 {
+        grid-area: Concepto1;
+    }
+
+    .con-2 .concept-1 {
+        grid-area: Concepto1;
+    }
+    .con-2 .concept-2 {
+        grid-area: Concepto2;
+    }
+
+    .con-3 .concept-1 {
+        grid-area: Concepto1;
+    }
+    .con-3 .concept-2 {
+        grid-area: Concepto2;
+    }
+    .con-3 .concept-3 {
+        grid-area: Concepto3 Concepto4;
+    }
+
+    .con-4 .concept-1 {
+        grid-area: Concepto1;
+    }
+    .con-4 .concept-2 {
+        grid-area: Concepto2;
+    }
+    .con-4 .concept-3 {
+        grid-area: Concepto3;
+    }
+    .con-4 .concept-4 {
+        grid-area: Concepto4;
+    }
+
+    .con-5 .concept-1 {
+        grid-area: Concepto1;
+    }
+    .con-5 .concept-2 {
+        grid-area: Concepto2;
+    }
+    .con-5 .concept-3 {
+        grid-area: Concepto3;
+    }
+    .con-5 .concept-4 {
+        grid-area: Concepto4;
+    }
+    .con-5 .concept-5 {
+        grid-area: Concepto5 Concepto6;
+    }
+
+    .con-6 .concept-1 {
+        grid-area: Concepto1;
+    }
+    .con-6 .concept-2 {
+        grid-area: Concepto2;
+    }
+    .con-6 .concept-3 {
+        grid-area: Concepto3;
+    }
+    .con-6 .concept-4 {
+        grid-area: Concepto4;
+    }
+    .con-6 .concept-5 {
+        grid-area: Concepto5;
+    }
+    .con-6 .concept-6 {
+        grid-area: Concepto6;
+    }
+
+    .con-7 .concept-1 {
+        grid-area: Concepto1;
+    }
+    .con-7 .concept-2 {
+        grid-area: Concepto2;
+    }
+    .con-7 .concept-3 {
+        grid-area: Concepto3;
+    }
+    .con-7 .concept-4 {
+        grid-area: Concepto4;
+    }
+    .con-7 .concept-5 {
+        grid-area: Concepto5;
+    }
+    .con-7 .concept-6 {
+        grid-area: Concepto6;
+    }
+    .con-7 .concept-7 {
+        grid-area: Concepto7 Concepto8;
     }
 }
